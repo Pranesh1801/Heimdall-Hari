@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heimdall</title>
+  <style>
+    body{
+      justify-content: center;
+      display: flex;
+      text-align: center;
+      cursor: not-allowed;
+    }
+    .ctr{
+      background-color: rgb(60, 60, 85);
+      color: white;
+      width:30%;
+      border-radius: 30px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding:30px;
+    }
+
+    input[type=text] {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 4px solid #10cce0;
+  }
+  .lb{
+    padding-right: 50%;
+  }
+  .lb2{
+    padding-right: 60%;
+  }
+  .button1{
+    background-color: #10cce0;
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+  }
+  .button2{
+    background-color: #2f5487;
+    color:aqua;
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+  }
+  .linkk{
+    color: #10cce0;
+  }
+  #va,label,#mtitle{
+    color: #10cce0;
+  }
+    #enn,#tabList{
+    display: none;
+    }
+    canvas{
+      display: none;
+    }
+	img{
+      top: 0;
+      right: 0;
+      width: 50px;
+      height: 50px;
+    }
+  </style>
+  <script src="right.js"></script>
+</head>
+<body>
+    <div class="ctr">
+      <form id="form1">
+        <img src="icon.png" alt="logo"><h1 id="mtitle">HEIMDALL</h1>
+        <div>
+          <video id="video" width="320" height="240" autoplay></video>
+          <canvas id="canvas" width="320" height="240"></canvas>
+          <script src="picture.js"></script>
+          <script src="s1.js"></script>
+          <script src="s2.js"></script>
+          <script src="s3.js"></script>
+        </div>
+        <h3><label for="usid" class="lb"><b>USERNAME: </b></label></h3>
+        <input type="text" id="ud" placeholder="Enter user id" name="usid"> <br>
+          <h3><label for="iulr" class="lb2"><b>CODE:</b> </label></h3>
+        <input type="text" id="linkInput" placeholder="Enter Code" name="iurl"><br> <br>
+        <button type="button" id="vfy" class="button1">Verify</button><p id="va"></p><br><br>
+        <button type="button" id="actv" class="button1">Activate</button> <br><br>
+        <button type="button" id="openLinkButton" class="button1">Open Link</button>
+        <h5>Opened Url : <span id="u" class="linkk"></span> </h5> <br><br>
+        <button type="button" id="closeAllTabsButton" class="button2">Close Test</button>
+      </form>
+      <script src="popup.js"></script>
+      <h2 id="enn">Tab URLs :</h2>
+        <ul id="tabList"></ul>
+        <p><h3>Total tab count: <span id="tc" class="linkk"></span></h3></p>
+        <h2>Your session is <h3 id="st"></h3></h2>
+        <p id="sck"></p>
+        <h4 id="cls"></h4>
+        <h1 id="countdown"></h1>
+        <h2 id="bumrah"></h2>
+        <script src="content.js"></script>
+    </div>
+  </body>
+</html>

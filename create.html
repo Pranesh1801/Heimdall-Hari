@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heimdall</title>
+  <style>
+    body{
+      justify-content: center;
+      display: flex;
+      text-align: center;
+      cursor: not-allowed;
+    }
+    .ctr{
+      background-color: rgb(60, 60, 85);
+      color: white;
+      width:70%;
+      border-radius: 30px;
+      padding-top: 20px;
+      padding-bottom: 30px;
+    }
+
+    input[type=text] {
+      width: 70%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: none;
+      border-bottom: 4px solid #10cce0;
+    }
+    .button1{
+      background-color: #20e05a;
+      width: 120px;
+      height: 40px;
+      border-radius: 20px;
+    }
+    .button2{
+      background-color: #10cce0;
+      width: 120px;
+      height: 40px;
+      border-radius: 20px;
+    }
+    ul{
+      list-style: none;
+    }
+    #details{
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      justify-content: center;
+    }
+    #det1, #det2 , #det3 {
+      padding: 20px;
+      margin: 10px;
+      text-align: center;
+    }
+    h3{
+      color: aqua;
+    }
+    #cmpltd{
+      color: #20e05a;
+    }
+    #sspndd{
+      color: red;
+    }
+    .cma{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-left:100px;
+      margin-bottom: 100px;
+    }
+    #refresh, #slds{
+      margin-top:22px;
+      margin-left:50px;
+      height: 30px;
+      width: 100px;
+      background-color: #2f5487;
+      border-radius: 20px;
+      color: aqua;
+    }
+    .vertical-line {
+      width: 1px;
+      background-color: #ffffff;
+      margin: 0 10px;
+    }
+  </style>
+  <script src="right.js"></script>
+</head>
+<body>
+  <script src="s1.js"></script>
+  <script src="s2.js"></script>
+  <script src="s3.js"></script>
+  <div class="ctr">
+    <form id="form1">
+      <h4><label for="usurl" class="lb">Enter URL: </label></h4>
+      <input type="text" id="usrurl" placeholder="Enter URL" name="usurl"> <br>
+      <button type="button" id="cgcode" class="button2">Generate code</button>
+    </form><br>
+    <h2>Your Code : <span id="gcode"></span></h2> <br><br>
+    <div class="cma">
+      <h2>Test Details</h2>
+      <button type="button" id="refresh">&#x21bb; <span>Refresh</span></button>
+    </div>
+    <div id="details">
+        <div id="det1">
+            <h3>Users Started</h3>
+            <ul id="strtd"></ul>
+        </div>
+        <div class="vertical-line"></div>
+        <div id="det2">
+            <h3>Users Completed</h3>
+            <ul id="cmpltd"></ul>
+        </div>
+        <div class="vertical-line"></div>
+        <div id="det3"> 
+            <h3>Users Suspended</h3>
+            <ul id="sspndd"></ul>
+        </div>
+    </div>
+    <div>
+      <input type="text" id="nv" placeholder="User ID for images"><br>
+      <input type="text" id="tt" placeholder="Test ID for images"><br>
+      <button id="slds">Load</button>
+      <div id="photos-container"></div>
+    </div>
+    <script src="final.js"></script>
+    <script src="create.js"></script>
+  </div>
+
+</body>
+</html>
